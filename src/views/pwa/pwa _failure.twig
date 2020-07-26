@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ data.title }}</title>
+    <link rel="manifest" href="/pwa/{{ data.appId }}/manifest.json">
+    <link rel="apple-touch-icon" sizes="512x512" href="{{ data.icon }}">
+    <link rel="icon" type="image/png" href="{{ data.icon }}" />
+    <link href='/stylesheets/pwa.css' rel='stylesheet'/> 
+
+    <meta content="{{ config.og_description }}{{ data.title }}" name="description"/>
+    <meta content="{{ config.keywords }}, {{ data.title }}, {{ data.title }} detox, digital detox {{ data.title }}" name="keywords"/>
+    <meta content="Sandoche ADITTANE & Farbod SARAF" name="author">
+    <link href="{{ fullUrl }}" rel="canonical"/>
+    <meta content="all, follow" name="robots"/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{{ data.icon }}">
+    <meta name="twitter:site" content="@farbodsaraf">
+    <meta name="twitter:title" content="{{ data.title }}{{ config.og_title }}">
+    <meta name="twitter:description" content="{{ config.og_description }} {{ data.title }}">
+    <meta name="twitter:creator" content="@farbodsaraf">
+    <meta name="twitter:image:src" content="{{ data.icon }}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ data.title }}{{ config.og_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ fullUrl }}" />
+    <meta property="og:image" content="{{ data.icon }}" />
+    <meta property="og:description" content="{{ config.og_description }}{{ data.title }}" />
+    <meta property="og:site_name" content="{{ data.title }}{{ config.og_title }}" />
+    <meta property="og:locale" content="en_US"/>
+
+  </head>
+  <body>
+    <iframe is="x-frame-bypass" src="{{ data.developerWebsite }}" class="pwa__iframe" frameBorder="0"></iframe>
+    
+    {% include '../partials/guide-modal.twig' %}
+
+    <script src="/custom-elements-builtin.js"></script>
+    <script type="module" src="/x-frame-bypass.js"></script>
+
+    <script>
+      // Service worker installation
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
+            reg.onupdatefound = function() {
+              var installingWorker = reg.installing;
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      console.log('New or updated content is available.');
+                    } else {
+                      console.log('Content is now available offline!');
+                    }
+                    break;
+                  case 'redundant':
+                    console.error('The installing service worker became redundant.');
+                    break;
+                }
+              };
+            };
+          }).catch(function(e) {
+            console.error('Error during service worker registration:', e);
+          });
+        });
+      }
+    </script>
+
+    <script>
+      // Manages the counter
+      var counter = document.getElementById('counter');
+      var localStorage = window.localStorage;
+      var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
+      counterValue++;
+  
+      counter.innerHTML = counterValue;
+      localStorage.setItem('{{ data.appId }}-counter', counterValue);
+
+      // Manage the donation message
+      var userDonated = JSON.parse(localStorage.getItem('donation'));
+      var donateMessage = document.getElementById('donate-message');
+      var donateButton = document.getElementById('donate-button');
+      var donateCard = document.getElementById('donate-card');
+
+      donateButton.addEventListener('click', function() {
+        localStorage.setItem('donation', true);
+      });
+
+      if (userDonated || counterValue < 3) {
+        donateCard.style.display = 'none';
+      } else {
+        const blurableItems = document.querySelectorAll('.blurable');
+        for (const item of blurableItems) {
+          item.style.filter = 'blur(10px)'
+        }
+      }
+    </script>
+
+    <script>
+      // Manages the motivation text
+      var motiveTextPlaceholder = document.getElementById('motive');
+      var localStorage = window.localStorage;
+      var motiveText = localStorage.getItem('{{ data.appId }}-motive') ? localStorage.getItem('{{ data.appId }}-motive') : 'You can now close it and safely go back to your work!';
+      var editButton = document.getElementById('edit');
+      var motiveDisplay = document.getElementById('motive-display');
+      var motiveForm = document.getElementById('motive-form');
+      var motiveInput = document.getElementById('motive-input');
+
+      motiveTextPlaceholder.innerHTML = motiveText;
+
+      editButton.addEventListener('click', function() {
+        motiveDisplay.style.display = 'none';
+        motiveForm.style.display = 'block';
+        motiveInput.value = motiveTextPlaceholder.innerHTML;
+      });
+
+      motiveForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        motiveTextPlaceholder.innerHTML = motiveInput.value;
+        motiveDisplay.style.display = 'block';
+        motiveForm.style.display = 'none';
+        localStorage.setItem('{{ data.appId }}-motive', motiveInput.value);
+      });
+    </script>
+
+    <script>
+      // Manages the Install button
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {  
+        document.getElementById('install-card').style.display = 'none';
+      }
+
+      window.addEventListener('beforeinstallprompt', (event) => {
+        window.deferredPrompt = event;
+        // show install button
+        document.getElementById('how-to-install').style.display = 'none';
+        document.getElementById('install').style.display = 'block';
+      });
+
+
+      var btnAdd = document.getElementById('install');
+      btnAdd.addEventListener('click', () => {
+        const promptEvent = window.deferredPrompt
+        if (!promptEvent) {
+          return;
+        }
+        promptEvent.prompt();
+
+        promptEvent.userChoice.then((result) => {
+          if(result.outcome === 'accepted') {
+            document.getElementById('install-card').style.display = 'none';
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Manages the share button
+      var shareButton = document.getElementById("share-button");
+      var share = function() {
+          navigator.share({
+            title: '{{ data.title }} Detox App',
+            text: '{{ config.share }}{{ data.title }}',
+            url: '{{ fullUrl }}',
+        })
+          .then(() => console.log('Successful share'))
+          .catch((error) => console.log('Error sharing', error));
+      }
+      if (navigator.share) {
+          shareButton.style.visibility = "visible";
+          shareButton.addEventListener('click', share);    
+      }
+    </script>
+
+    {% include '../partials/google-analytics.twig' %}
+  </body>
+</html>

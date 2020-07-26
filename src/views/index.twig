@@ -1,0 +1,112 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <main class="home container">
+    <div class="home__icon">
+      <img src="/images/icon.png" class="icon" alt="icon"/>
+    </div>
+    <h1 class="home__title">{{ config.title }}</h1>
+    <p class="home__description">{{ config.description }}</p>
+    <div class="card">
+      <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
+    </div>
+    <h2 class="home__subtitle">{{ config.popular }}</h2>
+    <ul class="home__applists">
+      {% for suggestion in config.suggestions %}
+      <li class="home__app">
+        <a href="/pwa/{{ suggestion.appId }}/" class="app">
+          <img class="app__image" src="{{ suggestion.image }}" alt="Digital detox app icon for {{ suggestion.name }}">
+          <p class="app__name">{{ suggestion.name }}</p>
+        </a>      
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+  <section class="container newsletter-section">
+
+    <h2 class="home__subtitle">Join our community</h2>
+    <p>We curate articles that help you digital detox!</p>
+    <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <div id="mc_embed_signup">
+    <form action="https://app.us3.list-manage.com/subscribe/post?u=8a7ad6d2f9c858527f7e0e422&amp;id=54e307f00b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    <label for="mce-EMAIL"> </label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8a7ad6d2f9c858527f7e0e422_54e307f00b" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+  </section>
+  <footer class="container footer">
+    <p>Made with ❤️ in Europe 🇪🇺 by <a href="https://www.sandoche.com" target="_blank">Sandoche</a> & <a href="https://farbodsaraf.com" target="_blank">Farbod</a>
+    <p>
+      <a href="https://github.com/sandoche/Detoxify-app" target="_blank">Github</a> |
+      <a href="https://t.me/detoxify_app" target="_blank">Telegram</a>
+    </p>
+  </footer>
+{% endblock %}
+
+{% block script %}
+  <script src="/javascripts/auto-complete.js"></script>
+  <script>
+    var loading = 0;
+
+    function startLoading() {
+      loading++;
+      updateLoader();
+    }
+
+    function stopLoading() {
+      loading--;
+      updateLoader();
+    }
+
+    function updateLoader() {
+      if(loading > 0) {
+        document.getElementById('search').classList.add('loader');
+      } else {
+        document.getElementById('search').classList.remove('loader');
+      }
+    }
+
+    var autocomplete = new autoComplete({
+      selector: "#search",
+      minChars: 3,
+      delay: 150,
+      cache: true,
+      source: function (term, suggest){
+        startLoading();
+        fetch('/api/search?q=' + term)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(myJson) {
+            suggest(myJson);
+            stopLoading();
+          });
+      },
+      renderItem: function (item, search){
+        return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="autocomplete-suggestion__icon">${item.title}</div>`;
+      },
+      onSelect(event, term, item) {
+        window.location.href = '/pwa/' + item.dataset.appid + '/';
+      }
+    });
+  </script>
+    {% include 'partials/google-analytics.twig' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/producthunt-floating-prompt@1.0.7/lib/producthunt-floating-prompt.min.js"></script>
+    <script>
+      FloatingPrompt({name:'Detoxify', url:' https://www.producthunt.com/posts/detoxify-2'});
+    </script>
+{% endblock %}
