@@ -8,14 +8,14 @@
     <h1 class="home__title">{{ config.title }}</h1>
     <p class="home__description">{{ config.description }}</p>
     <div class="card">
-      <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
+      <input id="search" class="search" type="text" placeholder="Search any website you would like to install">
     </div>
     <h2 class="home__subtitle">{{ config.popular }}</h2>
     <ul class="home__applists">
       {% for suggestion in config.suggestions %}
       <li class="home__app">
         <a href="/pwa/{{ suggestion.appId }}/" class="app">
-          <img class="app__image" src="{{ suggestion.image }}" alt="Digital detox app icon for {{ suggestion.name }}">
+          <img class="app__image" src="{{ suggestion.image }}" alt="Icon of {{ suggestion.name }}">
           <p class="app__name">{{ suggestion.name }}</p>
         </a>      
       </li>
@@ -25,7 +25,7 @@
   <section class="container newsletter-section">
 
     <h2 class="home__subtitle">Join our community</h2>
-    <p>We curate articles that help you digital detox!</p>
+    <p>We will keep updated about new productivity tricks</p>
     <!-- Begin Mailchimp Signup Form -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
