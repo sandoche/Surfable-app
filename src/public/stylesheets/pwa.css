@@ -354,8 +354,25 @@ input:focus {
   }
 }
 
-.pwa__iframe {
-  border: 0;
+.loading {
   width: 100vw;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.loader {
+  border: 3px solid hsla(263, 70%, 53%, 0.4);
+  border-top-color: hsla(263, 70%, 53%, 1);
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
