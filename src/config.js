@@ -1,5 +1,5 @@
 /*
-  Copyright 2019 Sandoche ADITTANE & Farbod SARAF
+  Copyright 2020 Sandoche ADITTANE & Farbod SARAF
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,14 +15,14 @@
 */
 
 const config = {
-  title: 'Detoxify.app',
-  short_description: 'Digital detox made easy',
-  description: 'Generate a fake app to replace any addictive app 📱🙅',
-  long_description: 'Use AppDetox to help you detox from any addictive app',
-  keywords: 'digital detox, detox, pwa',
-  share: 'Use this app to detox from ',
-  og_title: ' Fake detox app',
-  og_description: 'An fake app to help you detox from ',
+  title: 'Surfable.app',
+  short_description: 'Install any website as an app',
+  description: 'Install any website as an app for a quick access 📱',
+  long_description: 'Use Surfable.app to install any website as an app for a quick access',
+  keywords: 'instalable websites, installable app, installable webapp, pwa',
+  share: 'Use this app to install any website, for example ',
+  og_title: ' Installable Website',
+  og_description: 'A website to install ',
   popular: 'Most popular',
   google_analytics: 'UA-143582756-1',
   suggestions: [

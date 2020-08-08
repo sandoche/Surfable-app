@@ -1,7 +1,7 @@
 <p align="center">
   <img src="/src/public/images/icon.png" width="150">
 </p>
-<h1 align="center">Detoxify</h1>
+<h1 align="center">Surfable</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="/LICENSE">
@@ -19,10 +19,10 @@
 
 Generate a fake app to replace any addictive app 📱🙅
 
-Detoxify.app is a website to generate a fake of any app to replace it and help you in your digital detox process.
+Surfable.app is a website to generate a fake of any app to replace it and help you in your digital detox process.
 It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
 
-### 👉 [Get started](https://detoxify.app)
+### 👉 [Get started](https://surfable.app)
 <br>
 
 ## 📖 How to use
@@ -70,5 +70,5 @@ If you like this project, feel free to donate: https://www.buymeacoffee.com/deto
 
 ## 📝 License
 
-Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF](https://farbodsaraf.com/)<br />
+Copyright © 2020 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF](https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.

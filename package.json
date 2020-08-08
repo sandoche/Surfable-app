@@ -1,5 +1,5 @@
 {
-  "name": "detoxify",
+  "name": "surfable-app",
   "description": "Generate a fake app to replace any addictive app 📱🙅",
   "version": "1.0.0",
   "scripts": {
@@ -12,22 +12,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sandoche/Detoxify-app.git"
+    "url": "https://github.com/sandoche/Surfable-app.git"
   },
   "keywords": [
-    "digital-detox",
-    "detox",
+    "installable-app",
+    "installable",
+    "installable-website",
+    "install",
+    "website",
     "progressive-web-app",
     "pwa-apps",
     "pwa",
-    "detoxify"
+    "surfable-app"
   ],
   "author": "Sandoche ADITTANE & Farbod SARAF",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sandoche/Detoxify-app/issues"
+    "url": "https://github.com/sandoche/Surfable-app/issues"
   },
-  "homepage": "https://detoxify.app/",
+  "homepage": "https://surfable.app/",
   "dependencies": {
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
