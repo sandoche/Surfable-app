@@ -14,16 +14,17 @@
   limitations under the License.
 */
 
-import localDataService from './localDataService'
+import websites from '../data/websites'
 
-var gplay = require('google-play-scraper').memoized();
-
-const getAppData = async (appId) => {
-  const googlePlayData = await gplay.app({ appId: appId });
-  const localData = localDataService.getLocalAppData(appId) || {};
-  const appData = Object.assign(googlePlayData, localData);
-
-  return appData;
+const getLocalAppData = (appId) => {
+  return websites.find(website => website.appId === appId);
 }
 
-export default getAppData;
+const searchLocalAppData = (appName) => {
+
+}
+
+export default {
+  getLocalAppData,
+  searchLocalAppData
+};
