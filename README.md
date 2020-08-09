@@ -66,7 +66,7 @@ If a website could not be found in Google Play, it needs to be added manually.
   developerWebsite: 'https://www.kanbanote.com/board',
   icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
   appId: 'www.kanbanote.com'
-}
+},
 ```
 3. Note that the appId can be anything but should not already be used on Google Play, so putting the website address is a safe choice, also the icon should have a size of 512x512
 4. Then just do a pull request
