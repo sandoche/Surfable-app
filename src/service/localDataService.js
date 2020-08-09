@@ -15,13 +15,18 @@
 */
 
 import websites from '../data/websites'
+import Fuse from 'fuse.js'
 
 const getLocalAppData = (appId) => {
   return websites.find(website => website.appId === appId);
 }
 
 const searchLocalAppData = (appName) => {
+  const websitesIndex = new Fuse(websites, {
+    keys: ['title', 'appId']
+  })
 
+  return websitesIndex.search(appName)
 }
 
 export default {

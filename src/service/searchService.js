@@ -14,13 +14,32 @@
   limitations under the License.
 */
 
-var gplay = require('google-play-scraper').memoized();
+import localDataService from './localDataService'
+const gplay = require('google-play-scraper').memoized();
 
-const getResults = async function(query) {
-  return await gplay.search({
+const getResults = async function (query) {
+  const googlePlayResults = await gplay.search({
     term: query,
     num: 3
   });
+  const localWebsitesResults = localDataService.searchLocalAppData(query)
+
+  let results = googlePlayResults
+
+  for (const websiteData of localWebsitesResults) {
+    const website = websiteData.item
+    const appId = website.appId
+
+    const existingAppIndex = results.findIndex(result => result.appId === appId);
+
+    if (existingAppIndex >= 0) {
+      results[existingAppIndex] = Object.assign(results[existingAppIndex], website);
+    } else {
+      results.push(website)
+    }
+  }
+
+  return results;
 }
 
 export default getResults;
