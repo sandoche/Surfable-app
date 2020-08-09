@@ -48,8 +48,10 @@
       </header>
       <main class="main">
         <div class="card" id="install-card">
-          <img src="{{ data.icon }}" class="card__icon"/>
-          <p class="card__text card__text--space">Click "install" to install this website as an app</p>
+          <div class="card__icon-container">
+            <img src="{{ data.icon }}" class="card__icon"/>
+            <p class="card__text card__text--space">Click "install" to install this website as an app</p>
+          </div>
           <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">Install</a>
           <button class="button button--light" id="install" style="display: none;">Install</button>
         </div>
@@ -108,10 +110,11 @@
 
     <script>
       // Manages the Install button
-      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {  
-        document.getElementById('installer').style.display = 'none';
-        document.getElementById('loading').style.display = 'flex';
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {          
         window.location.href = "{{ data.developerWebsite }}";
+      } else {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('installer').style.display = 'block';
       }
 
       window.addEventListener('beforeinstallprompt', (event) => {

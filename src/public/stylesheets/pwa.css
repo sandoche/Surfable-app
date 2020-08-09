@@ -117,7 +117,13 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   margin-top: 8px;
   margin-bottom: 16px;
   margin-right: 16px;
-  float: left;
+}
+
+.card__icon-container {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+  width: 100%;
 }
 
 .button {
@@ -354,12 +360,16 @@ input:focus {
   }
 }
 
+.installer {
+  display: none;
+}
+
 .loading {
   width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  display: none;
+  display: flex;
 }
 
 .loader {
