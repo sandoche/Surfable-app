@@ -23,7 +23,6 @@ Surfable.app is a website to be able to install any website as an application.
 It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
 
 ### 👉 [Get started](https://surfable.app)
-<br>
 
 ## 🤔 How it works
 
@@ -43,7 +42,7 @@ Otherwise just follow the steps below.
 If you realize that a website redirects to the wrong URL you can correct it, by following these steps:
 1. Go to the page that is wrong
 2. Copy the `appId` from the URL for example in `https://surfable.app/pwa/com.sandoche.gitnews/` it would be `com.sandoche.gitnews`
-3. Edit the following file [/src/data/websites.js](`/src/data/websites.js`)
+3. Edit the following file [`src/data/websites.js`](/src/data/websites.js)
 4. Check if the `appId` does not already exist, if it does edit the object if it does not add to the array, a new object like the following:
 ```js
 {
@@ -59,7 +58,7 @@ If you realize that a website redirects to the wrong URL you can correct it, by 
 ### Add a website that does not exist
 
 If a website could not be found in Google Play, it needs to be added manually.
-1. Edit the following file [/src/data/websites.js](`/src/data/websites.js`)
+1. Edit the following file [`src/data/websites.js`](/src/data/websites.js)
 2. Check if the URL you would like to add does not exist, if it does edit the object if it does not add to the array, a new object like the following:
 ```js
 {
