@@ -16,7 +16,6 @@
 
 const websites = [
   {
-    title: 'Twitter',
     appId: 'com.twitter.android',
     developerWebsite: 'https://twitter.com/'
   },
