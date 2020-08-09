@@ -19,9 +19,20 @@ import localDataService from './localDataService'
 const gplay = require('google-play-scraper').memoized();
 
 const getAppData = async (appId) => {
-  const googlePlayData = await gplay.app({ appId: appId });
+  let googlePlayData;
+
+  try {
+    googlePlayData = await gplay.app({ appId: appId });
+  } catch (e) {
+    googlePlayData = {}
+  }
+  
   const localData = localDataService.getLocalAppData(appId) || {};
   const appData = Object.assign(googlePlayData, localData);
+
+  if (!appData.icon && !appData.title && !appData.developerWebsite) {
+    return null;
+  }
 
   return appData;
 }

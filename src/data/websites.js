@@ -23,7 +23,7 @@ const websites = [
   {
     title: 'Kanbanote',
     developerWebsite: 'https://www.kanbanote.com/board',
-    icon: 'https://www.kanbanote.com/assets/app/images/icon.png',
+    icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
     appId: 'www.kanbanote.com'
   }
 ]

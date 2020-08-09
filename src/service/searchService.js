@@ -35,7 +35,7 @@ const getResults = async function (query) {
     if (existingAppIndex >= 0) {
       results[existingAppIndex] = Object.assign(results[existingAppIndex], website);
     } else {
-      results.push(website)
+      results.unshift(website)
     }
   }
 

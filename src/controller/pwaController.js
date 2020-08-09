@@ -22,6 +22,11 @@ import config from '../config.js'
 router.get('/:appId', async function (req, res, next) {
   try {
     const appInfos = await getAppData(req.params.appId);
+    if (appInfos === null) {
+      res.render('error', { error: { status: 404 }})
+      return;
+    }
+
     const protocol = req.headers['x-forwarded-proto'] ? 'https' : 'http';
     const fullUrl = protocol + '://' + req.get('host') + req.originalUrl;
     res.render('pwa/pwa', { data: appInfos, config, fullUrl });
@@ -34,6 +39,11 @@ router.get('/:appId', async function (req, res, next) {
 router.get('/:appId/manifest\.json', async function (req, res, next) {
   try {
     const appInfos = await getAppData(req.params.appId);
+    if (appInfos === null) {
+      res.render('error', { error: { status: 404 }})
+      return;
+    }
+
     res.set('Content-Type', 'application/json');
     res.render('pwa/manifest', { data: appInfos });
   } catch (e) {
