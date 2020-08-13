@@ -64,9 +64,9 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
 }
 
 .icon {
-  width: 128px;
+  width: 96px;
   height: auto;
-  margin: auto;
+  margin: 16px auto;
 }
 
 /* Shared */
