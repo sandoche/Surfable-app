@@ -20,6 +20,48 @@ const websites = [
     developerWebsite: 'https://twitter.com/'
   },
   {
+    appId: 'com.facebook.katana',
+    developerWebsite: 'https://facebook.com/'
+  },
+  {
+    appId: 'com.google.android.calendar',
+    developerWebsite: 'https://calendar.google.com/calendar/u/0/'
+  },
+  {
+    appId: 'com.google.android.youtube',
+    developerWebsite: 'https://www.youtube.com/'
+  },
+  {
+    appId: 'com.google.android.youtube',
+    developerWebsite: 'https://www.youtube.com/'
+  },
+  {
+    appId: 'com.google.android.gm',
+    developerWebsite: 'https://mail.google.com/mail/u/0/#inbox'
+  },
+  {
+    appId: 'com.reddit.frontpage',
+    developerWebsite: 'http://www.reddit.com/'
+  },
+  {
+    title: 'Hackernews',
+    appId: 'com.manuelmaly.hn',
+    developerWebsite: 'https://news.ycombinator.com/'
+  },
+  {
+    appId: 'com.google.android.googlequicksearchbox',
+    developerWebsite: 'https://www.google.com/'
+  },
+  {
+    appId: 'com.google.android.googlequicksearchbox',
+    developerWebsite: 'https://www.google.com/'
+  },
+  {
+    title: 'Google Keep',
+    appId: 'com.google.android.keep',
+    developerWebsite: 'https://keep.google.com/u/0/'
+  },
+  {
     title: 'Kanbanote',
     developerWebsite: 'https://www.kanbanote.com/board',
     icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
