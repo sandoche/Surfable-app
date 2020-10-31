@@ -36,7 +36,7 @@ const websites = [
   {
     title: 'YouTube',
     appId: 'com.google.android.youtube',
-    icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
+    icon: 'hhttps://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png',
     developerWebsite: 'https://www.youtube.com/'
   },
   {
