@@ -70,6 +70,12 @@ const websites = [
     developerWebsite: 'https://keep.google.com/u/0/'
   },
   {
+    title: 'Soundcloud',
+    appId: 'com.soundcloud.android',
+    icon: 'https://play-lh.googleusercontent.com/lvYCdrPNFU0Ar_lXln3JShoE-NaYF_V-DNlp4eLRZhUVkj00wAseSIm-60OoCKznpw',
+    developerWebsite: 'https://soundcloud.com/'
+  },
+  {
     title: 'Kanbanote',
     developerWebsite: 'https://www.kanbanote.com/board',
     icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
