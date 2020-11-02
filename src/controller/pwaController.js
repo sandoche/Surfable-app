@@ -18,6 +18,7 @@ var express = require('express');
 var router = express.Router();
 import getAppData from '../service/appDataService'
 import config from '../config.js'
+import md5 from 'crypto-js/md5';
 
 router.get('/:appId', async function (req, res, next) {
   try {
@@ -52,7 +53,10 @@ router.get('/:appId/manifest\.json', async function (req, res, next) {
   }
 });
 
-router.get('/:appId/service-worker\.js', function (req, res, next) {
+router.get('/:appId/service-worker\.js', async function (req, res, next) {
+  const appInfos = await getAppData(req.params.appId);
+  const hash = md5(appInfos.title + appInfos.appId + appInfos.icon + appInfos.developerWebsite)
+
   try {
     res.set('Content-Type', 'application/javascript');
     res.send(`/*
@@ -71,13 +75,13 @@ router.get('/:appId/service-worker\.js', function (req, res, next) {
     // Names of the two caches used in this version of the service worker.
     // Change to v2, etc. when you update any of the local resources, which will
     // in turn trigger the install event again.
-    const PRECACHE = '${req.params.appId}-precache-v4';
+    const PRECACHE = '${req.params.appId}-precache-${hash}';
     const RUNTIME = 'runtime';
     
     // A list of local resources we always want to be cached.
     const PRECACHE_URLS = [
       '/pwa/${req.params.appId}/',
-      '/pwa/${req.params.appId}',
+      '/pwa/${req.params.appId}/manifest.json',
       '/stylesheets/pwa.css'
     ];
     
