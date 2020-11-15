@@ -18,31 +18,31 @@ const websites = [
   {
     title: 'Twitter',
     appId: 'com.twitter.android',
-    icon: 'https://upload.wikimedia.org/wikipedia/de/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk',
     developerWebsite: 'https://twitter.com/'
   },
   {
     title: 'Facebook',
     appId: 'com.facebook.katana',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Facebook_Icon_%28Single_Path_-_Transparent_%22f%22%29.svg/1024px-Facebook_Icon_%28Single_Path_-_Transparent_%22f%22%29.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg',
     developerWebsite: 'https://facebook.com/'
   },
   {
     title: 'Google Calendar',
     appId: 'com.google.android.calendar',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Google_Calendar_icon.svg/1051px-Google_Calendar_icon.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/Jsbb0EeesKUbDTl3UyDKO6sNz45RCMh7gnoI6giQcQz1f5Mj0J4TRh7Psyu53vShh-qm',
     developerWebsite: 'https://calendar.google.com/calendar/u/0/'
   },
   {
     title: 'YouTube',
     appId: 'com.google.android.youtube',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc',
     developerWebsite: 'https://www.youtube.com/'
   },
   {
     title: 'Gmail',
     appId: 'com.google.android.gm',
-    icon: 'https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png',
+    icon: 'https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI',
     developerWebsite: 'https://mail.google.com/mail/u/0/#inbox'
   },
   {
@@ -54,23 +54,23 @@ const websites = [
   {
     title: 'Hackernews',
     appId: 'com.manuelmaly.hn',
-    icon: 'https://cdn4.iconfinder.com/data/icons/socialcones/508/HackerNews-512.png',
+    icon: 'https://play-lh.googleusercontent.com/3khCgkKPv883-k_FLmFE1N4ErpuaRUjUcQrFEn5a447bJqA6I7o8cv3-wvHWNRWa_jPk',
     developerWebsite: 'https://news.ycombinator.com/'
   },
   {
     title: 'Google',
     appId: 'com.google.android.googlequicksearchbox',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/DKoidc0T3T1KvYC2stChcX9zwmjKj1pgmg3hXzGBDQXM8RG_7JjgiuS0CLOh8DUa7as',
     developerWebsite: 'https://www.google.com/'
   },
   {
     title: 'Google Keep',
     appId: 'com.google.android.keep',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Google_Keep_icon.svg/1024px-Google_Keep_icon.svg.png',
+    icon: 'https://play-lh.googleusercontent.com/zGDJ3nGGv_QqhHoY6wXI1qvG9eo-bj03HGVreITCkr-BIfVfGEvnczJKsNzgiC57Ds0',
     developerWebsite: 'https://keep.google.com/u/0/'
   },
   {
-    title: 'Soundcloud',
+    title: 'SoundCloud',
     appId: 'com.soundcloud.android',
     icon: 'https://play-lh.googleusercontent.com/lvYCdrPNFU0Ar_lXln3JShoE-NaYF_V-DNlp4eLRZhUVkj00wAseSIm-60OoCKznpw',
     developerWebsite: 'https://soundcloud.com/'
