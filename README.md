@@ -92,6 +92,12 @@ npm run dev
 Since this project scraps data from Google Play, the number of queries are limited per server, therefore in case of problem we recommend you to host your own instance of Surfable.<br><br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+### Deploy using Docker
+```sh
+docker build . -t surfable
+docker run -p 3000:80 surfable
+```
+
 ## Authors
 
 👤 **Sandoche ADITTANE & Farbod SARAF**
