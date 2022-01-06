@@ -42,7 +42,7 @@ const websites = [
   {
     title: 'Gmail',
     appId: 'com.google.android.gm',
-    icon: 'https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg',
     developerWebsite: 'https://mail.google.com/mail/u/0/#inbox'
   },
   {
