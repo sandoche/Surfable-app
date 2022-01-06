@@ -89,21 +89,15 @@ const config = {
     },
     {
       name: "DuckDuckGo",
-      appId: "com.zhiliaoapp.musically",
+      appId: "com.duckduckgo.mobile.android",
       image:
-        "com.duckduckgo.mobile.android",
+        "https://play-lh.googleusercontent.com/vvjvZn0l16nn8j1KfCAbHlBn7wm6la_55pfxGOW9Wg0ut6C51wKVb3DWJTqSJc-eCnA",
     },
      {
       name: "ProductHunt",
-      appId: "com.zhiliaoapp.musically",
+      appId: "com.producthuntmobile",
       image:
-        "com.producthuntmobile",
-    },
-    {
-      name: "ProductHunt",
-      appId: "com.zhiliaoapp.musically",
-      image:
-        "com.producthuntmobile",
+        "https://play-lh.googleusercontent.com/hgo4YzPUCb4nhDMcCQXvPKfZVpDZ08Go7HohrS9OORyWsFgDzLmwljADvIFlcU9QMiM",
     },
   ],
 };
