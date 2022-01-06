@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'gilroy-extrabold';
-  src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
-       url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-family: "gilroy-extrabold";
+  src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,10 +12,12 @@
   --color-grey-dark: #142533;
   --color-blue-light: #eff3fe;
   --color-blue-medium: #6490f0;
-  --color-blue: #2329D6;
+  --color-blue: #2329d6;
 
-  --font-family-titles: 'gilroy-extrabold', 'Roboto', 'Helvetica', 'Arial', Sans-serif;
-  --font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --font-family-titles: "gilroy-extrabold", "Roboto", "Helvetica", "Arial",
+    Sans-serif;
+  --font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
   --font-size-xl: 42px;
   --font-size-lg: 24px;
@@ -28,11 +30,14 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -53,10 +58,16 @@ input {
 input:focus {
   outline: none;
   border: 1px solid var(--color-blue-medium);
-  border-radius: 3px; 
+  border-radius: 3px;
 }
 
-a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--color-blue);
+}
 
 .home__icon {
   text-align: center;
@@ -84,13 +95,39 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
 
 /* Auto complete */
 .autocomplete-suggestions {
-  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: 0px 10px 10px rgba(0,0,0,.5);
-  position: absolute; display: none; z-index: 9999; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
-  border: 1px solid var(--color-grey-medium); border-radius: 3px;
+  text-align: left;
+  cursor: default;
+  border: 1px solid #ccc;
+  border-top: 0;
+  background: #fff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  max-height: 254px;
+  overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border: 1px solid var(--color-grey-medium);
+  border-radius: 3px;
 }
-.autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
-.autocomplete-suggestion b { font-weight: normal; color: #1f8dd6; }
-.autocomplete-suggestion.selected { background: #f0f0f0; }
+.autocomplete-suggestion {
+  position: relative;
+  padding: 0 0.6em;
+  line-height: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.02em;
+  color: #333;
+}
+.autocomplete-suggestion b {
+  font-weight: normal;
+  color: #1f8dd6;
+}
+.autocomplete-suggestion.selected {
+  background: #f0f0f0;
+}
 
 /* Home */
 
@@ -99,6 +136,19 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   font-family: var(--font-family-titles);
   font-size: var(--font-size-xl);
   margin-top: 0;
+}
+
+.home__title-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .home__title-link {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
 }
 
 .home__description {
@@ -130,13 +180,19 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
 .loader {
   background-image: url("/images/loader.gif");
   background-size: 20px 20px;
   background-position: calc(100% - 10px) center;
   background-repeat: no-repeat;
 }
-
 
 .button {
   cursor: pointer;
@@ -150,11 +206,12 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   text-decoration: none;
   width: 100%;
 }
@@ -175,14 +232,12 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
 
 .home__app {
   transform: scale(1);
-  transition: ease-in-out .3s transform;
+  transition: ease-in-out 0.3s transform;
 }
 
 .home__app:hover {
   transform: scale(1.1);
 }
-
-
 
 .app {
   color: var(--color-blue);
@@ -207,7 +262,7 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   background-color: #fff;
   padding: 24px;
   margin-bottom: 64px;
-  box-shadow: 0 4px 24px rgba(32,43,54,.08);
+  box-shadow: 0 4px 24px rgba(32, 43, 54, 0.08);
 }
 
 .newsletter-section {
@@ -220,31 +275,116 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
 }
 
 #mc_embed_signup input.email {
-  width: 100% !important; 
+  width: 100% !important;
   margin-right: 4px !important;
 }
 
-#mc_embed_signup form {text-align:center; padding:10px 0 10px 0;}
-.mc-field-group { display: inline-block; } /* positions input field horizontally */
-#mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; border: 1px solid #ABB0B2;  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #343434; background-color: #fff; box-sizing:border-box; height:32px; padding: 0px 0.4em; display: inline-block; margin: 0; width:350px; vertical-align:top;}
-#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
-#mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
-#mc_embed_signup .button {font-size: 13px; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; letter-spacing: .03em; color: #fff; background-color: #aaa; box-sizing:border-box; height:32px; line-height:32px; padding:0 18px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
-#mc_embed_signup .button:hover {background-color:#777; cursor:pointer;}
-#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
-#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
-#mc_embed_signup #mce-error-response {display:none;}
-#mc_embed_signup #mce-success-response {color:#529214; display:none;}
-#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+#mc_embed_signup form {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.mc-field-group {
+  display: inline-block;
+} /* positions input field horizontally */
+#mc_embed_signup input.email {
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Verdana,
+    sans-serif;
+  font-size: 15px;
+  border: 1px solid #abb0b2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #343434;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0px 0.4em;
+  display: inline-block;
+  margin: 0;
+  width: 350px;
+  vertical-align: top;
+}
+#mc_embed_signup label {
+  display: block;
+  font-size: 16px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+#mc_embed_signup .clear {
+  display: inline-block;
+} /* positions button horizontally in line with input */
+#mc_embed_signup .button {
+  font-size: 13px;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background-color: #aaa;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+#mc_embed_signup .button:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+#mc_embed_signup div#mce-responses {
+  float: left;
+  top: -1.4em;
+  padding: 0em 0.5em 0em 0.5em;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 5%;
+  clear: both;
+}
+#mc_embed_signup div.response {
+  margin: 1em 0;
+  padding: 1em 0.5em 0.5em 0;
+  font-weight: bold;
+  float: left;
+  top: -1.5em;
+  z-index: 1;
+  width: 80%;
+}
+#mc_embed_signup #mce-error-response {
+  display: none;
+}
+#mc_embed_signup #mce-success-response {
+  color: #529214;
+  display: none;
+}
+#mc_embed_signup label.error {
+  display: block;
+  float: none;
+  width: auto;
+  margin-left: 1.05em;
+  text-align: left;
+  padding: 0.5em 0;
+}
 @media (max-width: 768px) {
-    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
-    #mc_embed_signup .clear {display: block; width: 100% }
-    #mc_embed_signup .button {width: 100%; margin:0; }
+  #mc_embed_signup input.email {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #mc_embed_signup .clear {
+    display: block;
+    width: 100%;
+  }
+  #mc_embed_signup .button {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .button {
   display: flex;
-  color:#fff;
+  color: #fff;
   background: linear-gradient(65deg, #70b5b5 0, #a3cf7f 100%);
   display: inline-flex;
   letter-spacing: 0px;
@@ -259,12 +399,19 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   padding: 16px 32px;
   text-align: center;
   white-space: nowrap;
-  box-shadow: 0 8px 24px rgba(32,43,54,0.12);
-  transition: all .15s ease;
+  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+  transition: all 0.15s ease;
 }
-
 
 .button:hover {
   color: #fff;
-  box-shadow: 0 8px 24px rgba(32,43,54,0.25);
+  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
