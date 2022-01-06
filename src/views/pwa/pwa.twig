@@ -116,6 +116,10 @@
 		</div>
 		<div class="loading" id="loading">
 			<div class="loader"></div>
+			<p class="loading-text">Surfable is a free an open-source project.
+				<br>Feel free to
+				<a href="https://www.buymeacoffee.com/surfable" target="_blank">buy us a coffee</a>
+			</p>
 		</div>
 
 		{% include '../partials/guide-modal.twig' %}
@@ -125,7 +129,7 @@
 'use strict';
 if ('serviceWorker' in navigator) {
 window.addEventListener('load', function () {
-navigator.serviceWorker.register('/pwa/  {{ data.appId }}/service-worker.js', {scope: '/pwa/  {{ data.appId }}/'}).then(function (reg) {
+navigator.serviceWorker.register('/pwa/     {{ data.appId }}/service-worker.js', {scope: '/pwa/     {{ data.appId }}/'}).then(function (reg) {
 reg.onupdatefound = function () {
 var installingWorker = reg.installing;
 installingWorker.onstatechange = function () {

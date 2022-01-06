@@ -425,6 +425,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-direction: column;
 }
 
 .loader {
@@ -436,6 +437,11 @@ input:focus {
   animation: spin 1s linear infinite;
 }
 
+.loading-text {
+  margin-top: 24px;
+  text-align: center;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -444,4 +450,12 @@ input:focus {
 
 .footer p {
   margin: 12px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
