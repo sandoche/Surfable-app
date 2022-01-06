@@ -36,19 +36,19 @@ const websites = [
   {
     title: 'YouTube',
     appId: 'com.google.android.youtube',
-    icon: 'https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png',
+    icon: 'https://www.pinclipart.com/picdir/middle/72-729738_youtube-red-circle-circle-youtube-logo-png-clipart.png',
     developerWebsite: 'https://www.youtube.com/'
   },
   {
     title: 'Gmail',
     appId: 'com.google.android.gm',
-    icon: 'https://image.similarpng.com/very-thumbnail/2020/12/Gmail-logo-design-on-transparent-background-PNG.png',
+    icon: 'https://cdn.icon-icons.com/icons2/2642/PNG/512/google_mail_gmail_logo_icon_159346.png',
     developerWebsite: 'https://mail.google.com/mail/u/0/#inbox'
   },
   {
     title: 'Reddit',
     appId: 'com.reddit.frontpage',
-    icon: 'https://toppng.com/uploads/preview/reddit-icon-reddit-logo-transparent-115628752708pqmsy4kgm.png',
+    icon: 'https://image.pngaaa.com/995/79995-middle.png',
     developerWebsite: 'http://www.reddit.com/'
   },
   {
@@ -80,6 +80,12 @@ const websites = [
     developerWebsite: 'https://www.kanbanote.com/board',
     icon: 'https://www.kanbanote.com/assets/app/images/icon_512x512.png',
     appId: 'www.kanbanote.com'
+  },
+  {
+    name: "Pinterest",
+    appId: "com.pinterest",
+    image: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
+    developerWebsite: 'https://www.pinterest.com/'
   }
 ]
 
