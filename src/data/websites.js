@@ -36,7 +36,7 @@ const websites = [
   {
     title: 'YouTube',
     appId: 'com.google.android.youtube',
-    icon: 'https://www.pinclipart.com/picdir/middle/72-729738_youtube-red-circle-circle-youtube-logo-png-clipart.png',
+    icon: 'https://image.similarpng.com/very-thumbnail/2020/07/Youtube-logo-vector-PNG.png',
     developerWebsite: 'https://www.youtube.com/'
   },
   {
@@ -48,7 +48,7 @@ const websites = [
   {
     title: 'Reddit',
     appId: 'com.reddit.frontpage',
-    icon: 'https://image.pngaaa.com/995/79995-middle.png',
+    icon: 'https://www.vectorico.com/download/social_media/Reddit-Icon.png',
     developerWebsite: 'http://www.reddit.com/'
   },
   {
@@ -72,7 +72,7 @@ const websites = [
   {
     title: 'SoundCloud',
     appId: 'com.soundcloud.android',
-    icon: 'http://assets.stickpng.com/thumbs/58af04446c252499281ae91f.png',
+    icon: 'https://spng.pngfind.com/pngs/s/225-2259616_itunes-und-soundcloud-logo-fr-lsterschwestern-subreddit-soundcloud.png',
     developerWebsite: 'https://soundcloud.com/'
   },
   {
@@ -86,6 +86,12 @@ const websites = [
     appId: "com.pinterest",
     image: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
     developerWebsite: 'https://www.pinterest.com/'
+  },
+  {
+    name: "Instagram",
+    appId: "com.instagram.android",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
+    developerWebsite: 'https://www.instagram.com/'
   }
 ]
 
