@@ -124,73 +124,69 @@
 
 		{% include '../partials/guide-modal.twig' %}
 
-		<script>
-			// Service worker installation
-'use strict';
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', function () {
-navigator.serviceWorker.register('/pwa/     {{ data.appId }}/service-worker.js', {scope: '/pwa/     {{ data.appId }}/'}).then(function (reg) {
-reg.onupdatefound = function () {
-var installingWorker = reg.installing;
-installingWorker.onstatechange = function () {
-switch (installingWorker.state) {
-case 'installed':
-if (navigator.serviceWorker.controller) {
-console.log('New or updated content is available.');
-} else {
-console.log('Content is now available offline!');
-}
-break;
-case 'redundant':
-console.error('The installing service worker became redundant.');
-break;
-}
-};
-};
-}).catch(function (e) {
-console.error('Error during service worker registration:', e);
-});
-});
-}
-		</script>
+		 <script>
+      // Service worker installation
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
+            reg.onupdatefound = function() {
+              var installingWorker = reg.installing;
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      console.log('New or updated content is available.');
+                    } else {
+                      console.log('Content is now available offline!');
+                    }
+                    break;
+                  case 'redundant':
+                    console.error('The installing service worker became redundant.');
+                    break;
+                }
+              };
+            };
+          }).catch(function(e) {
+            console.error('Error during service worker registration:', e);
+          });
+        });
+      }
+    </script>
 
-		<script>
-			// Manages the Install button
-if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-window.location.href = "{{ data.developerWebsite }}";
-} else {
-document.getElementById('loading').style.display = 'none';
-document.getElementById('installer').style.display = 'block';
-}
+    <script>
+      // Manages the Install button
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {          
+        window.location.href = "{{ data.developerWebsite }}";
+      } else {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('installer').style.display = 'block';
+      }
+      window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = event;
+        
+        // show install button
+        document.getElementById('how-to-install').style.display = 'none';
+        document.getElementById('install').style.display = 'block';
+      });
+      var btnAdd = document.getElementById('install');
+      btnAdd.addEventListener('click', () => {
+        const promptEvent = window.deferredPrompt
+        if (!promptEvent) {
+          return;
+        }
+        promptEvent.prompt();
+        promptEvent.userChoice.then((result) => {
+          if(result.outcome === 'accepted') {
+            document.getElementById('install-card').style.display = 'none';
+            window.location.href = "{{ data.developerWebsite }}";
+          }
+        });
+      });
+    </script>
 
-window.addEventListener('beforeinstallprompt', (event) => {
-event.preventDefault();
-// Stash the event so it can be triggered later.
-deferredPrompt = event;
-
-// show install button
-document.getElementById('how-to-install').style.display = 'none';
-document.getElementById('install').style.display = 'block';
-});
-
-
-var btnAdd = document.getElementById('install');
-btnAdd.addEventListener('click', () => {
-const promptEvent = window.deferredPrompt
-if (! promptEvent) {
-return;
-}
-promptEvent.prompt();
-
-promptEvent.userChoice.then((result) => {
-if (result.outcome === 'accepted') {
-document.getElementById('install-card').style.display = 'none';
-window.location.href = "{{ data.developerWebsite }}";
-}
-});
-});
-		</script>
-
-		{% include '../partials/google-analytics.twig' %}
-	</body>
+    {% include '../partials/google-analytics.twig' %}
+  </body>
 </html>
