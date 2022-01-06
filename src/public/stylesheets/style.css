@@ -241,7 +241,7 @@ a:active {
 
 .app {
   color: var(--color-blue);
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: center;
 }
 
