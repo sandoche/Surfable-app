@@ -26,20 +26,20 @@ It is built with `Express.js` and uses `google-play-scraper` package to search i
 - It uses Google Play Store as a source of data by using apps' names, icons and developer website
 - The search also works using Google Play Store data
 - Because it uses the developer website as the URL of the app, some URLs can be wrong, but it can be corrected (see the documentation below)
-- Some links may be missing of the search it can manually be added, doing a pull request
+- Some links may be missing on the search (you can make a pull request to add them)
 
-## 📖 How to add & update a website
+## 📖 How to add or update a website
 
 If you don't know Javascript, just open an [https://github.com/sandoche/Surfable-app/issues](issue) explaining what link you would like to add / edit.
 Otherwise just follow the steps below.
 
 ### Update a website
 
-If you realize that a website redirects to the wrong URL you can correct it, by following these steps:
+If you realize that a website redirects to the wrong URL you can correct it by following these steps:
 1. Go to the page that is wrong
 2. Copy the `appId` from the URL for example in `https://surfable.app/pwa/com.sandoche.gitnews/` it would be `com.sandoche.gitnews`
 3. Edit the following file [`src/data/websites.js`](/src/data/websites.js)
-4. Check if the `appId` does not already exist, if it does edit the object if it does not add to the array, a new object like the following:
+4. Check if the `appId` does not already exist, if it does, edit the object and if it does not exsit, add a new object like below to the array:
 ```js
 {
   title: 'Twitter',
@@ -48,14 +48,14 @@ If you realize that a website redirects to the wrong URL you can correct it, by 
   icon: 'https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk',
 },
 ```
-5. Note that omitting one of the fields will take the default value from Google Play. You can for example omit the icon field, or the title.
+5. Note that omitting one of the fields will take the default value from Google Play. You can for example omit the icon field, and the logo will be retrieved from Google Play.
 6. Then just do a pull request
 
 ### Add a website that does not exist
 
 If a website could not be found in Google Play, it needs to be added manually.
 1. Edit the following file [`src/data/websites.js`](/src/data/websites.js)
-2. Check if the URL you would like to add does not exist, if it does edit the object if it does not add to the array, a new object like the following:
+2. Check if the URL you would like to add does not exist, if it does edit the object, if it does not exist, add a new object like below to the array:
 ```js
 {
   title: 'Kanbanote',
@@ -64,7 +64,7 @@ If a website could not be found in Google Play, it needs to be added manually.
   appId: 'www.kanbanote.com'
 },
 ```
-3. Note that the appId can be anything but should not already be used on Google Play, so putting the website address is a safe choice, also the icon should have a size of 512x512
+3. Note that the appId can be anything except the ones that are already used on Google Play, so putting the website address is a safe choice, also the icon should have a size of 512x512
 4. Then just do a pull request
 
 
@@ -119,5 +119,5 @@ If you like this project, feel free to donate: https://www.buymeacoffee.com/deto
 
 ## 📝 License
 
-Copyright © 2020 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF](https://farbodsaraf.com/)<br />
+Copyright © 2021 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF](https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.
