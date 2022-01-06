@@ -138,6 +138,19 @@ a:active {
   margin-top: 0;
 }
 
+.home__title-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .home__title-link {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+}
+
 .home__description {
   text-align: center;
   font-size: var(--font-size-lg);
@@ -393,4 +406,12 @@ a:active {
 .button:hover {
   color: #fff;
   box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
