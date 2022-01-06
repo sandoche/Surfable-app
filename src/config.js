@@ -40,10 +40,10 @@ const config = {
         "https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw",
     },
     {
-      name: "Snapchat",
-      appId: "com.snapchat.android",
+      name: "Gmail",
+      appId: "com.google.android.gm",
       image:
-        "https://lh3.googleusercontent.com/ujz8cInt2YuaGLo2wahih771yXzWbyhNhzrCzm5Y5omDnLRt3v-FTTNMVfgT7FgIEfI",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg",
     },
     {
       name: "YouTube",
@@ -52,16 +52,58 @@ const config = {
         "https://lh3.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc",
     },
     {
-      name: "Twitter",
-      appId: "com.twitter.android",
+      name: "Google Calendar",
+      appId: "com.google.android.calendar",
       image:
-        "https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg",
     },
     {
-      name: "9gag",
-      appId: "com.ninegag.android.app",
+      name: "SoundCloud",
+      appId: "com.soundcloud.twa",
       image:
-        "https://lh3.googleusercontent.com/QiE-x76mMbIxT5W2sBCdORRnz-YJys2ridssRJZmiE540_5ADuFnOg-9I0H6bTQOuw",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Antu_soundcloud.svg/800px-Antu_soundcloud.svg.png",
+    },
+    {
+      name: "Reddit",
+      appId: "com.reddit.frontpage",
+      image:
+        "https://www.vectorico.com/download/social_media/Reddit-Icon.png",
+    },
+    {
+      name: "Pinterest",
+      appId: "com.pinterest",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png",
+    },
+    {
+      name: "LinkedIn",
+      appId: "com.linkedin.android",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+    },
+    {
+      name: "Tiktok",
+      appId: "com.zhiliaoapp.musically",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Cib-tiktok_%28CoreUI_Icons_v1.0.0%29.svg/800px-Cib-tiktok_%28CoreUI_Icons_v1.0.0%29.svg.png",
+    },
+    {
+      name: "DuckDuckGo",
+      appId: "com.zhiliaoapp.musically",
+      image:
+        "com.duckduckgo.mobile.android",
+    },
+     {
+      name: "ProductHunt",
+      appId: "com.zhiliaoapp.musically",
+      image:
+        "com.producthuntmobile",
+    },
+    {
+      name: "ProductHunt",
+      appId: "com.zhiliaoapp.musically",
+      image:
+        "com.producthuntmobile",
     },
   ],
 };
