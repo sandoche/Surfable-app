@@ -1,6 +1,6 @@
 {
   "name": "surfable-app",
-  "description": "Generate a fake app to replace any addictive app 📱🙅",
+  "description": "Install any website as an app for a quick access 📱",
   "version": "1.0.0",
   "scripts": {
     "start": "node ./bin/www",
