@@ -3,7 +3,6 @@
 </p>
 <h1 align="center">Surfable</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="/LICENSE">
     <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
   </a>
