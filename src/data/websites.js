@@ -84,13 +84,13 @@ const websites = [
   {
     name: "Pinterest",
     appId: "com.pinterest",
-    image: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
+    icon: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
     developerWebsite: 'https://www.pinterest.com/'
   },
   {
     name: "Instagram",
     appId: "com.instagram.android",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
     developerWebsite: 'https://www.instagram.com/'
   }
 ]
