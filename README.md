@@ -13,7 +13,7 @@
   </a>
 </p>
 
-Install any website as an app for a quick access 📱
+Install any website as an app for a quick access 🖥️
 
 Surfable.app is a website to be able to install any website as an application.
 It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
