@@ -43,7 +43,7 @@ const config = {
       name: "Gmail",
       appId: "com.google.android.gm",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg",
+        "https://cdn.icon-icons.com/icons2/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
     },
     {
       name: "YouTube",
