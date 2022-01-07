@@ -115,7 +115,7 @@ Give a ⭐️ if this project helped you!
 
 ## ☕️ Buy me a coffee 
 
-If you like this project, feel free to donate: https://www.buymeacoffee.com/detoxify
+If you like this project, feel free to donate: https://www.buymeacoffee.com/surfable
 
 ## 📝 License
 
