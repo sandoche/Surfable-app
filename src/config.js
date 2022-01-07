@@ -1,5 +1,5 @@
 /*
-  Copyright 2020 Sandoche ADITTANE & Farbod SARAF
+  Copyright 2022 Sandoche ADITTANE & Farbod SARAF
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ const config = {
       name: "Gmail",
       appId: "com.google.android.gm",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg",
+        "https://cdn.icon-icons.com/icons2/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
     },
     {
       name: "YouTube",

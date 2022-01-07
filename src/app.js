@@ -1,5 +1,5 @@
 /*
-  Copyright 2020 Sandoche ADITTANE & Farbod SARAF
+  Copyright 2022 Sandoche ADITTANE & Farbod SARAF
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ var logger = require('morgan');
 var indexController = require('./controller/indexController');
 var searchController = require('./controller/searchController');
 var pwaController = require('./controller/pwaController');
+var versionController = require('./controller/versionController');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexController);
 app.use('/pwa', pwaController);
 app.use('/api/search', searchController);
+app.use('/api/version', versionController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2020 Sandoche ADITTANE & Farbod SARAF
+  Copyright 2022 Sandoche ADITTANE & Farbod SARAF
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -84,13 +84,13 @@ const websites = [
   {
     name: "Pinterest",
     appId: "com.pinterest",
-    image: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
+    icon: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
     developerWebsite: 'https://www.pinterest.com/'
   },
   {
     name: "Instagram",
     appId: "com.instagram.android",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
     developerWebsite: 'https://www.instagram.com/'
   }
 ]

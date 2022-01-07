@@ -14,22 +14,12 @@
   limitations under the License.
 */
 
-import websites from '../data/websites'
-import Fuse from 'fuse.js'
+var express = require('express');
+var router = express.Router();
 
-const getLocalAppData = (appId) => {
-  return websites.find(website => website.appId === appId);
-}
+router.get('/', function(req, res, next) {
+    const pjson = require('../../package.json')
+    return res.json({ version: pjson.version })
+});
 
-const searchLocalAppData = (appName) => {
-  const websitesIndex = new Fuse(websites, {
-    keys: ['title', 'appId']
-  })
-
-  return websitesIndex.search(appName)
-}
-
-export default {
-  getLocalAppData,
-  searchLocalAppData
-};
+module.exports = router;
