@@ -92,6 +92,11 @@ const websites = [
     appId: "com.instagram.android",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
     developerWebsite: 'https://www.instagram.com/'
+  },
+  {
+    name: "DuckDuckGo",
+    appId: "com.duckduckgo.mobile.android",
+    developerWebsite: 'https://duckduckgo.com/'
   }
 ]
 
