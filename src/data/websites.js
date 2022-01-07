@@ -97,6 +97,10 @@ const websites = [
     name: "DuckDuckGo",
     appId: "com.duckduckgo.mobile.android",
     developerWebsite: 'https://duckduckgo.com/'
+  },
+  {
+    appId: "com.disney.disneyplus",
+    developerWebsite: 'https://www.disneyplus.com/'
   }
 ]
 
