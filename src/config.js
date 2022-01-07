@@ -17,7 +17,7 @@
 const config = {
   title: "Surfable.app",
   short_description: "Install any website as an app",
-  description: "Install any website as an app for a quick access 📱",
+  description: "Install any website as an app for an instant access 🖥",
   long_description:
     "Use Surfable.app to install any website as an app for a quick access",
   keywords: "instalable websites, installable app, installable webapp, pwa",
