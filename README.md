@@ -36,7 +36,7 @@ Otherwise just follow the steps below.
 ### Update a website
 
 If you realize that a website redirects to the wrong URL you can correct it by following these steps:
-1. Go to the page that is wrong
+1. Search for the app name on Surfable.app
 2. Copy the `appId` from the URL for example in `https://surfable.app/pwa/com.sandoche.gitnews/` it would be `com.sandoche.gitnews`
 3. Edit the following file [`src/data/websites.js`](/src/data/websites.js)
 4. Check if the `appId` does not already exist, if it does, edit the object and if it does not exsit, add a new object like below to the array:
