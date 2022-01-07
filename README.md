@@ -10,9 +10,7 @@
 
   <a href="https://twitter.com/farbodsaraf">
     <img alt="Twitter: farbodsaraf" src="https://img.shields.io/twitter/follow/farbodsaraf.svg?style=social" target="_blank" />
-  </a>
-  
-    <a href="https://twitter.com/sandochee">
+  </a><a href="https://twitter.com/sandochee">
     <img alt="Twitter: sandochee" src="https://img.shields.io/twitter/follow/sandochee.svg?style=social" target="_blank" />
   </a>
 </p>
