@@ -1,7 +1,7 @@
 {
   "name": "surfable-app",
   "description": "Install any website as an app for a quick access 📱",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/dev -e js,twig --exec babel-node --presets es2015,env",
