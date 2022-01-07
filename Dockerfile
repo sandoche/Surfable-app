@@ -1,11 +1,21 @@
-FROM node:14
+FROM node:14.16.0-alpine
 
-WORKDIR /usr/src/app
+ARG PM2_PUBLIC_KEY=${PM2_PUBLIC_KEY}
+ARG PM2_SECRET_KEY=${PM2_SECRET_KEY}
 
-COPY . .
+ADD package.json /tmp/package.json
+ADD package-lock.json /tmp/package-lock.json
 
-RUN npm install
+RUN cd /tmp && npm install --silent && mkdir -p /app && cp -a /tmp/node_modules /app/
+RUN npm install pm2 -g
+
+WORKDIR /app
+
+ADD . /app
+
+ENV PM2_PUBLIC_KEY $PM2_PUBLIC_KEY
+ENV PM2_SECRET_KEY $PM2_SECRET_KEY
+
 RUN npm run build
 
-EXPOSE 3000
-CMD [ "node", "./bin/www" ]
+CMD ["pm2-runtime", "ecosystem.config.js"]
