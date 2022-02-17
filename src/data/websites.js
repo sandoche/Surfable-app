@@ -22,6 +22,11 @@ const websites = [
     developerWebsite: 'https://twitter.com/'
   },
   {
+    title: 'Asana',
+    appId: 'com.asana.app',
+    developerWebsite: 'https://app.asana.com/'
+  },
+  {
     title: 'Facebook',
     appId: 'com.facebook.katana',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/600px-Facebook_Logo_%282019%29.png',
