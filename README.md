@@ -31,7 +31,7 @@ It is built with `Express.js` and uses `google-play-scraper` package to search i
 
 ## 📖 How to add or update a website
 
-If you don't know Javascript, just open an [https://github.com/sandoche/Surfable-app/issues](issue) explaining what link you would like to add / edit.
+If you don't know Javascript, just open an [issue](https://github.com/sandoche/Surfable-app/issues) explaining what link you would like to add / edit.
 Otherwise just follow the steps below.
 
 ### Update a website
@@ -71,19 +71,26 @@ If a website could not be found in Google Play, it needs to be added manually.
 
 ## ⚙️ How to use
 
-### Install
+### Clone repo:
+```
+git clone git@github.com:sandoche/Surfable-app.git
+```
+
+### On Mac:
+
+#### Install
 
 ```sh
 npm install
 ```
 
-### Usage
+#### Usage
 
 ```sh
 npm run start
 ```
 
-### Development
+#### Development
 
 ```sh
 npm run dev
