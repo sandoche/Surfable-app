@@ -101,6 +101,10 @@ const websites = [
   {
     appId: "com.disney.disneyplus",
     developerWebsite: 'https://www.disneyplus.com/'
+  },
+  {
+    appId: "com.whatsapp",
+    developerWebsite: 'https://web.whatsapp.com/'
   }
 ]
 
