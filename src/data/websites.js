@@ -111,6 +111,12 @@ const websites = [
     appId: "com.whatsapp",
     developerWebsite: 'https://web.whatsapp.com/'
   }
+  {
+  title: 'Hexbear',
+  developerWebsite: 'https://www.hexbear.net/',
+  icon: 'https://git.chapo.chat/hexbear-collective/emotes/src/commit/4457979dea04930acd970c09b37c0fac1133286a/hexbear-chapochat.png',
+  appId: 'https://www.hexbear.net/'
+  },
 ]
 
 export default websites;
