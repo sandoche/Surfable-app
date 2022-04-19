@@ -110,6 +110,10 @@ const websites = [
   {
     appId: "com.whatsapp",
     developerWebsite: 'https://web.whatsapp.com/'
+  },
+  {
+    appId: "com.discord",
+    developerWebsite: 'https://discord.com/channels/@me'
   }
 ]
 
