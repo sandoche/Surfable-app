@@ -112,6 +112,12 @@ const websites = [
     developerWebsite: 'https://web.whatsapp.com/'
   },
   {
+    title: 'Hexbear',
+    developerWebsite: 'https://www.hexbear.net/',
+    icon: 'https://drive.google.com/uc?export=view&id=1msONq5jSCWULkFDk9Zm8FC5k3NqKXkac',
+    appId: 'www.hexbear.net'
+  },
+  {
     appId: "com.discord",
     developerWebsite: 'https://discord.com/channels/@me'
   },
