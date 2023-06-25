@@ -58,16 +58,16 @@ const config = {
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg",
     },
     {
-      name: "SoundCloud",
-      appId: "com.soundcloud.twa",
+      name: "ChatGPT",
+      appId: "com.openai.chat",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Antu_soundcloud.svg/800px-Antu_soundcloud.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
     },
     {
       name: "Reddit",
       appId: "com.reddit.frontpage",
       image:
-        "https://www.vectorico.com/download/social_media/Reddit-Icon.png",
+        "https://seeklogo.com/images/R/reddit-logo-23F13F6A6A-seeklogo.com.png",
     },
     {
       name: "Pinterest",
@@ -85,7 +85,7 @@ const config = {
       name: "Tiktok",
       appId: "com.zhiliaoapp.musically",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Cib-tiktok_%28CoreUI_Icons_v1.0.0%29.svg/800px-Cib-tiktok_%28CoreUI_Icons_v1.0.0%29.svg.png",
+        "https://play-lh.googleusercontent.com/OS-MhSWOPtlUZLt0_UP5TI4juSf0XhyHxGfJa6pA-UIYkZ1BB6QHTZwaMEzZDPqYsmk",
     },
     {
       name: "DuckDuckGo",

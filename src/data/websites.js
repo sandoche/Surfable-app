@@ -53,7 +53,7 @@ const websites = [
   {
     title: 'Reddit',
     appId: 'com.reddit.frontpage',
-    icon: 'https://www.vectorico.com/download/social_media/Reddit-Icon.png',
+    icon: 'https://seeklogo.com/images/R/reddit-logo-23F13F6A6A-seeklogo.com.png',
     developerWebsite: 'http://www.reddit.com/'
   },
   {
@@ -87,19 +87,19 @@ const websites = [
     appId: 'www.kanbanote.com'
   },
   {
-    name: "Pinterest",
+    title: "Pinterest",
     appId: "com.pinterest",
     icon: "https://www.freepnglogos.com/uploads/pinterest-logo-emblem-png-11.png",
     developerWebsite: 'https://www.pinterest.com/'
   },
   {
-    name: "Instagram",
+    title: "Instagram",
     appId: "com.instagram.android",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png",
     developerWebsite: 'https://www.instagram.com/'
   },
   {
-    name: "DuckDuckGo",
+    title: "DuckDuckGo",
     appId: "com.duckduckgo.mobile.android",
     developerWebsite: 'https://duckduckgo.com/'
   },
@@ -114,6 +114,12 @@ const websites = [
   {
     appId: "com.discord",
     developerWebsite: 'https://discord.com/channels/@me'
+  },
+  {
+    title: "ChatGPT",
+    appId: "com.openai.chat",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png",
+    developerWebsite: 'https://chat.openai.com/'
   }
 ]
 

@@ -71,12 +71,12 @@ If a website could not be found in Google Play, it needs to be added manually.
 
 ## ⚙️ How to use
 
-### Clone repo:
+### Clone
 ```
 git clone git@github.com:sandoche/Surfable-app.git
 ```
 
-### On Mac:
+### Run
 
 #### Install
 
